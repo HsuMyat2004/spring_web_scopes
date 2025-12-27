@@ -1,0 +1,28 @@
+🌐 Request Scope
+What happens: A new bean object is created every time a user makes an HTTP request.
+
+Analogy: Imagine a coffee shop. Each time a customer orders a coffee, the barista makes a fresh cup just for that order. Once the order is done, that cup is gone.
+
+Key idea: Short-lived, tied only to one request.
+
+👤 Session Scope
+What happens: A bean object is created once per user session and reused for all requests from that same user until they log out or the session ends.
+
+Analogy: Think of a hotel stay. When you check in, you get a room key that works for your entire stay. You don’t get a new key every time you enter your room—same key until checkout.
+
+Key idea: Lives as long as the user’s session.
+
+🏢 Application Scope
+What happens: Only one bean object is created for the whole application, and it’s shared by everyone while the app is running.
+
+Analogy: Like the lobby clock in a hotel. There’s just one clock, visible to all guests, and it stays there as long as the hotel is open.
+
+Key idea: Singleton for the entire app, shared by all users.
+
+✅ Quick summary:
+
+Request scope → one bean per request (short-lived).
+
+Session scope → one bean per user session (medium-lived).
+
+Application scope → one bean for the whole app (long-lived).
