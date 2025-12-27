@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
-    @Autowired
-    private LoginProcessor loginProcessor;
+   // @Autowired
+    private final LoginProcessor loginProcessor;
+
+    public LoginController(LoginProcessor loginProcessor) {
+        this.loginProcessor = loginProcessor;
+    }
 
     @GetMapping("/")
     public String getLoginPage() {
