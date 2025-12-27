@@ -1,0 +1,9 @@
+[HTTP Request 1: Login]
+   -> New LoginProcessor (request scope)
+   -> Uses LoggedUserManagementService (session scope)
+   -> Stores username in session bean
+
+[HTTP Request 2: Fetch Profile]
+   -> New LoginProcessor (request scope)
+   -> Reuses same LoggedUserManagementService (session scope)
+   -> Reads username from session bean
